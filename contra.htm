@@ -14,17 +14,24 @@ function MM_reloadPage(init) {  //reloads the window if Nav4 resized
 MM_reloadPage(true);
 //-->
 </script>
-</head>
+<style type="text/css">
+<!--
+body {
+	background-color: #FF0000;
+}
+-->
+</style></head>
 
 <body>
-<div id="Layer1" style="position:absolute; left:375px; top:115px; width:299px; height:223px; z-index:1"><script language="javascript">
+<div id="Layer1" style="position:absolute; left:466px; top:69px; width:299px; height:223px; z-index:1">
+  <script language="javascript">
 <!--//
 /*This Script allows people to enter by using a form that asks for a
 UserID and Password*/
 function pasuser(form) {
 if (form.id.value=="Miguel") { 
 if (form.pass.value=="matus11") {              
-location="file:///C:/Users/chch2/OneDrive/Escritorio/proyecto/index.htm" 
+location="index.htm" 
 } else {
 alert("Invalid Password")
 }
