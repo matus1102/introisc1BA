@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<script language="JavaScript">
+<!--
+//you can assign the initial color of the background here
+r=255;
+g=255;
+b=255;
+flag=0;
+t=new Array;
+o=new Array;
+d=new Array;
+
+function hex(a,c)
+{
+t[a]=Math.floor(c/16)
+o[a]=c%16
+switch (t[a])
+{
+case 10:
+t[a]='A';
+break;
+case 11:
+t[a]='B';
+break;
+case 12:
+t[a]='C';
+break;
+case 13:
+t[a]='D';
+break;
+case 14:
+t[a]='E';
+break;
+case 15:
+t[a]='F';
+break;
+default:
+break;
+}
+switch (o[a])
+{
+case 10:
+o[a]='A';
+break;
+case 11:
+o[a]='B';
+break;
+case 12:
+o[a]='C';
+break;
+case 13:
+o[a]='D';
+break;
+case 14:
+o[a]='E';
+break;
+case 15:
+o[a]='F';
+break;
+default:
+break;
+}
+}
+
+function ran(a,c)
+{
+if ((Math.random()>2/3||c==0)&&c<255)
+{
+c++
+d[a]=2;
+}
+else
+{
+if ((Math.random()<=1/2||c==255)&&c>0)
+{
+c--
+d[a]=1;
+}
+else d[a]=0;
+}
+return c
+}
+function do_it(a,c)
+{
+if ((d[a]==2&&c<255)||c==0)
+{
+c++
+d[a]=2
+}
+else
+if ((d[a]==1&&c>0)||c==255)
+{
+c--;
+d[a]=1;
+}
+if (a==3)
+{
+if (d[1]==0&&d[2]==0&&d[3]==0)
+flag=1
+}
+return c
+}
+function disco()
+{
+if (flag==0)
+{
+r=ran(1, r);
+g=ran(2, g);
+b=ran(3, b);
+hex(1,r)
+hex(2,g)
+hex(3,b)
+document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+flag=50
+}
+else
+{
+r=do_it(1, r)
+g=do_it(2,g)
+b=do_it(3,b)
+hex(1,r)
+hex(2,g)
+hex(3,b)
+document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+flag--
+}
+
+setTimeout('disco()',50)
+}
+//-->
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Untitled Document</title>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</script>
+<style type="text/css">
+<!--
+.style2 {
+	font-size: 70px;
+	color: #000000;
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="Layer1" style="position:absolute; left:280px; top:157px; width:648px; height:279px; z-index:1">
+  <table width="644" height="281" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="390"><img src="roulette.jpg" width="367" height="333"></td>
+    <td width="379">
+
+<form name="fire">
+Load number of bullets (1-6):<br /><input name="bullets" type="text" size=3 value=1><br />
+
+<p>
+<input name="message" type="button" value="Play Roulette!" onClick="fireit()">
+</p>
+
+</form>
+
+<script>
+
+//Russian Roulette Game- by javascriptkit.com
+//Visit JavaScript Kit (http://javascriptkit.com) for script
+//Credit must stay intact for use
+
+function fireit(){
+var theone=Math.floor(Math.random()*6)
+
+if (theone<=document.fire.bullets.value-1)
+alert("Bang. You\'re dead!")
+else{
+document.fire.message.value="Whew. Got lucky!"
+setTimeout("document.fire.message.value='Play Roulette'",500)
+}
+}
+
+</script>
+
+<p align="center"><br />
+<a href=</a></p>
+
+</td>
+  </tr>
+</table></div>
+<body onload="disco()"> 
+<div align="center"><span class="style2">Ruleta Rusa</span>
+</div>
+</body>
+</html>
