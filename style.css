@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* CSS Document */
+p,a,li,h1,h2,h3,h4,h5,h6{
+    font-family: arizonia;
+    font-style: italic;
+    font-weight: 400;
+}
+.cabecera{
+	width:120%;
+	height:100px;
+	overflow: hidden;
+	background-color:#BBA4E5;
+}
+.logo{
+	width:10%;
+	overflow: hidden;
+	float: left;
+}
+.logo img{
+	width:100px;
+}
+.menu{
+	width: 90%;
+	float: left;
+}
+.menu ul li{
+	list-style: none;
+	float: left
+}
+.menu ul li a{
+	color: #FFFFFF;
+	text-decoration:none;
+	margin-right: 35px;
+	font-size: 45px;
+	
+}
+.contenido img{
+	width: 100%;
+	height: 500px;
+}
+.correo a{
+	float:left;
+	color: #ffffff;
+	font-size: 35px;
+	overflow: hidden;
+	display: inline-block;
+	margin-left: 450px;
+}
+.cuerpo{
+	width: 100%;
+	height: 600px;
+	background-color: white;
+	
+}
+.cuerpo h3{
+	text-align: center;
+	font-size: 50px;
+}
+.cuerpo img{
+	width: 100%;
+	height: 300px;
+}
+.slider h5{
+	font-size: 50px;
+}
+.slider p{
+	font-size: 40px;
+}
+.parallax{
+	width:100%;
+	height: 600px;
+	overflow: hidden;
+	background-image: url("pagina/14.jpg");
+	background-attachment: fixed;
+	padding-top: 150px;
+}
+.parallax h3{
+	color: #ffffff;
+	font-size: 100px;
+	text-align: center;
+}
+.piedepagina {
+	width: 100%;
+	height: 140px;
+	background-color:antiquewhite;
+	
+}
+.social img{
+	width: 40px;
+	padding: 5px;
+	height: 50px;
+	display: inline-block;
+}
+.piedepagina h3{
+}
+.piedepagina h4{
+	width: 80%;
+	font-size:12px; 
+}
+.tabla{
+	background-image: url("pagina/nubes.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 1825px;
+}
+.tabla img{
+	width:  25%;
+	height: 550px;
+	float: left;
+	margin: 30px;
+}
